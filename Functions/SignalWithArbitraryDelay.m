@@ -1,7 +1,9 @@
-function [s,t] = SignalWithArbitraryDelay(SIGNAL_PARAMETERS, parts, time_limits, ts, delay)
+function [s,t] = SignalWithArbitraryDelay(SIGNAL_PARAMETERS, parts, time_limits, delay)
 
 time_min = time_limits(1);
 time_max = time_limits(2);
+
+ts = SIGNAL_PARAMETERS.ts;		% sampling step for this specific sensor
 
 t_pos = 0:ts:time_max;
 t_neg = (-ts):(-ts):time_min;

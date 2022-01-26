@@ -98,14 +98,13 @@ end
 
 disp('Creating DVS, RS & LIDAR signals ...');
 time_limits = [min(twanted), max(twanted)];
-[s_dvs,tdvs] = SignalWithArbitraryDelay(SIGNAL_PARAMETERS.dvs, parts, time_limits, ts_dvs, 0);
-[s_rs,trs] = SignalWithArbitraryDelay(SIGNAL_PARAMETERS.rs, parts, time_limits, ts_rs, 0);
-[s_lidar,tlidar] = SignalWithArbitraryDelay(SIGNAL_PARAMETERS.lidar, parts, time_limits, ts_lidar, 0);
 
+delayDVS = uniform_random([-SIGNAL_PARAMETERS.dvs.ts, +SIGNAL_PARAMETERS.dvs.ts]);
+delayRS = uniform_random([-SIGNAL_PARAMETERS.rs.ts, +SIGNAL_PARAMETERS.rs.ts]);
+delayLIDAR = uniform_random([-SIGNAL_PARAMETERS.lidar.ts, +SIGNAL_PARAMETERS.lidar.ts]);
 
-
-
-
-
+[s_dvs,tdvs] = SignalWithArbitraryDelay(SIGNAL_PARAMETERS.dvs, parts, time_limits, delayDVS);
+[s_rs,trs] = SignalWithArbitraryDelay(SIGNAL_PARAMETERS.rs, parts, time_limits, delayRS);
+[s_lidar,tlidar] = SignalWithArbitraryDelay(SIGNAL_PARAMETERS.lidar, parts, time_limits, delayLIDAR);
 
 

@@ -8,7 +8,7 @@
 
 
 
-if save
+if save_CSVs
     disp('Saving in CSV files ...');
 
     %% Original

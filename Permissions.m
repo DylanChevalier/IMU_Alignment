@@ -20,7 +20,7 @@ Correlation = true;             % Allow Cross-Correlation calculation
 ErrorNormMinimization = true;   % Allow Error Norm Minimization
 
 % Save in CSV files
-save = false;                       % General save
+save_CSVs = false;                       % General save
 save_Linear_Interpolation = true;   % save Linear interpolation
 save_Cubic_Interpolation = true;    % save Cubic interpolation
 save_Sinc_Filter_NonUniform = true; % save sinc filter

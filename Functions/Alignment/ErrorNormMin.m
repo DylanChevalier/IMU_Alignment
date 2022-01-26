@@ -20,6 +20,6 @@ function [deltaPoint,error_values] = ErrorNormMin(s1,s2)
     % Error Norm curve
     error_values = A - 2*k .* B + k.^2 * C;
     % Number of points to shift
-    deltaPoint = round(length(error_values)/2- find(error_values == min(error_values)));
+    deltaPoint = (length(error_values)+1)/2 - find(error_values == min(error_values), 1);
 end
 
