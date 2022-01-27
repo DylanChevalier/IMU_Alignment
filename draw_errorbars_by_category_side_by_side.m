@@ -108,7 +108,7 @@ end
 for k = 1:N_plots
 	x = xes{k};
 	y = averages{k};
-	hpavg = plot(x, y, '-', 'MarkerSize', 14, 'LineWidth', 1, 'Color', [0.8 0.8 0.8]);
+	hpavg = plot(x, y, '-', 'MarkerSize', 14, 'LineWidth', 1, 'Color', errorbars_colors{k});
 % 	y = medians{k};
 % 	hpmed = plot(x, y, 'b.-.', 'MarkerSize', 14, 'LineWidth', 2);
 end
