@@ -5,8 +5,3 @@
 3) You can find all signals save in CSV files
 
 WARNING: you may encounter errors that are related to the fact that some interpolations are not allowed.
-
-
-
-
-dsfkjsdlfjsdklafjasldkfjklsj
